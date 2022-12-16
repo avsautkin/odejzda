@@ -1,0 +1,488 @@
+<!--allrecords--><div id="allrecords" data-tilda-export="yes" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="6466744" data-tilda-page-id="32334942" data-tilda-formskey="1bc0c6bdb2940ef8c6fdfca986466744" data-tilda-lazy="yes" data-tilda-project-headcode="yes"><div id="rec522662904" class="r t-rec" style="background-color:#000000; " data-animationappear="off" data-record-type="456" data-bg-color="#000000"><!-- T456 --><div id="nav522662904marker"></div><div class="tmenu-mobile" ><div class="tmenu-mobile__container"><div class="tmenu-mobile__text t-name t-name_md" field="menu_mob_title">&nbsp;</div><div class="t-menuburger t-menuburger_first "><span style="background-color:#fff;"></span><span style="background-color:#fff;"></span><span style="background-color:#fff;"></span><span style="background-color:#fff;"></span></div><script>function t_menuburger_init(recid) {
+var rec = document.querySelector('#rec' + recid);
+if (!rec) return;
+var burger = rec.querySelector('.t-menuburger');
+if (!burger) return;
+var isSecondStyle = burger.classList.contains('t-menuburger_second');
+if (isSecondStyle && !window.isMobile && !('ontouchend' in document)) {
+burger.addEventListener('mouseenter', function() {
+if (burger.classList.contains('t-menuburger-opened')) return;
+burger.classList.remove('t-menuburger-unhovered');
+burger.classList.add('t-menuburger-hovered');
+});
+burger.addEventListener('mouseleave', function() {
+if (burger.classList.contains('t-menuburger-opened')) return;
+burger.classList.remove('t-menuburger-hovered');
+burger.classList.add('t-menuburger-unhovered');
+setTimeout(function() {
+burger.classList.remove('t-menuburger-unhovered');
+}, 300);
+});
+}
+if (!burger.closest('.tmenu-mobile') &&
+!burger.closest('.t450__burger_container') &&
+!burger.closest('.t204__burger')) {
+burger.addEventListener('click', function() {
+burger.classList.toggle('t-menuburger-opened');
+burger.classList.remove('t-menuburger-unhovered');
+});
+}
+var menu = rec.querySelector('[data-menu="yes"]');
+if (!menu) return;
+var menuLinks = menu.querySelectorAll('.t-menu__link-item');
+var submenuClassList = ['t978__menu-link_hook', 't978__tm-link', 't966__tm-link', 't794__tm-link', 't-menusub__target-link'];
+Array.prototype.forEach.call(menuLinks, function (link) {
+link.addEventListener('click', function () {
+var isSubmenuHook = submenuClassList.some(function (submenuClass) {
+return link.classList.contains(submenuClass);
+});
+if (isSubmenuHook) return;
+burger.classList.remove('t-menuburger-opened');
+});
+});
+}
+t_onReady(function() {
+t_onFuncLoad('t_menuburger_init', function(){t_menuburger_init('522662904');});
+});</script><style>.t-menuburger {
+position: relative;
+flex-shrink: 0;
+width: 28px;
+height: 20px;
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+transition: .5s ease-in-out;
+cursor: pointer;
+z-index: 999;
+}
+/*---menu burger lines---*/
+.t-menuburger span {
+display: block;
+position: absolute;
+width: 100%;
+opacity: 1;
+left: 0;
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+transition: .25s ease-in-out;
+height: 3px;
+background-color: #000;
+}
+.t-menuburger span:nth-child(1) {
+top: 0px;
+}
+.t-menuburger span:nth-child(2),
+.t-menuburger span:nth-child(3) {
+top: 8px;
+}
+.t-menuburger span:nth-child(4) {
+top: 16px;
+}
+/*menu burger big*/
+.t-menuburger__big {
+width: 42px;
+height: 32px;
+}
+.t-menuburger__big span {
+height: 5px;
+}
+.t-menuburger__big span:nth-child(2),
+.t-menuburger__big span:nth-child(3) {
+top: 13px;
+}
+.t-menuburger__big span:nth-child(4) {
+top: 26px;
+}
+/*menu burger small*/
+.t-menuburger__small {
+width: 22px;
+height: 14px;
+}
+.t-menuburger__small span {
+height: 2px;
+}
+.t-menuburger__small span:nth-child(2),
+.t-menuburger__small span:nth-child(3) {
+top: 6px;
+}
+.t-menuburger__small span:nth-child(4) {
+top: 12px;
+}
+/*menu burger opened*/
+.t-menuburger-opened span:nth-child(1) {
+top: 8px;
+width: 0%;
+left: 50%;
+}
+.t-menuburger-opened span:nth-child(2) {
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+.t-menuburger-opened span:nth-child(3) {
+-webkit-transform: rotate(-45deg);
+transform: rotate(-45deg);
+}
+.t-menuburger-opened span:nth-child(4) {
+top: 8px;
+width: 0%;
+left: 50%;
+}
+.t-menuburger-opened.t-menuburger__big span:nth-child(1) {
+top: 6px;
+}
+.t-menuburger-opened.t-menuburger__big span:nth-child(4) {
+top: 18px;
+}
+.t-menuburger-opened.t-menuburger__small span:nth-child(1),
+.t-menuburger-opened.t-menuburger__small span:nth-child(4) {
+top: 6px;
+}
+/*---menu burger first style---*/
+@media (hover), (min-width:0\0) {
+.t-menuburger_first:hover span:nth-child(1) {
+transform: translateY(1px);
+}
+.t-menuburger_first:hover span:nth-child(4) {
+transform: translateY(-1px);
+}
+.t-menuburger_first.t-menuburger__big:hover span:nth-child(1) {
+transform: translateY(3px);
+}
+.t-menuburger_first.t-menuburger__big:hover span:nth-child(4) {
+transform: translateY(-3px);
+}
+}
+/*---menu burger second style---*/
+.t-menuburger_second span:nth-child(2),
+.t-menuburger_second span:nth-child(3) {
+width: 80%;
+left: 20%;
+right: 0;
+}
+@media (hover), (min-width:0\0) {
+.t-menuburger_second.t-menuburger-hovered span:nth-child(2),
+.t-menuburger_second.t-menuburger-hovered span:nth-child(3) {
+animation: t-menuburger-anim 0.3s ease-out normal forwards;
+}
+.t-menuburger_second.t-menuburger-unhovered span:nth-child(2),
+.t-menuburger_second.t-menuburger-unhovered span:nth-child(3) {
+animation: t-menuburger-anim2 0.3s ease-out normal forwards;
+}
+}
+.t-menuburger_second.t-menuburger-opened span:nth-child(2),
+.t-menuburger_second.t-menuburger-opened span:nth-child(3){
+left: 0;
+right: 0;
+width: 100%!important;
+}
+/*---menu burger third style---*/
+.t-menuburger_third span:nth-child(4) {
+width: 70%;
+left: unset;
+right: 0;
+}
+@media (hover), (min-width:0\0) {
+.t-menuburger_third:not(.t-menuburger-opened):hover span:nth-child(4) {
+width: 100%;
+}
+}
+.t-menuburger_third.t-menuburger-opened span:nth-child(4) {
+width: 0!important;
+right: 50%;
+}
+/*---menu burger fourth style---*/
+.t-menuburger_fourth {
+height: 12px;
+}
+.t-menuburger_fourth.t-menuburger__small {
+height: 8px;
+}
+.t-menuburger_fourth.t-menuburger__big {
+height: 18px;
+}
+.t-menuburger_fourth span:nth-child(2),
+.t-menuburger_fourth span:nth-child(3) {
+top: 4px;
+opacity: 0;
+}
+.t-menuburger_fourth span:nth-child(4) {
+top: 8px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(2),
+.t-menuburger_fourth.t-menuburger__small span:nth-child(3) {
+top: 3px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(4) {
+top: 6px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(2),
+.t-menuburger_fourth.t-menuburger__small span:nth-child(3) {
+top: 3px;
+}
+.t-menuburger_fourth.t-menuburger__small span:nth-child(4) {
+top: 6px;
+}
+.t-menuburger_fourth.t-menuburger__big span:nth-child(2),
+.t-menuburger_fourth.t-menuburger__big span:nth-child(3) {
+top: 6px;
+}
+.t-menuburger_fourth.t-menuburger__big span:nth-child(4) {
+top: 12px;
+}
+@media (hover), (min-width:0\0) {
+.t-menuburger_fourth:not(.t-menuburger-opened):hover span:nth-child(1) {
+transform: translateY(1px);
+}
+.t-menuburger_fourth:not(.t-menuburger-opened):hover span:nth-child(4) {
+transform: translateY(-1px);
+}
+.t-menuburger_fourth.t-menuburger__big:not(.t-menuburger-opened):hover span:nth-child(1) {
+transform: translateY(3px);
+}
+.t-menuburger_fourth.t-menuburger__big:not(.t-menuburger-opened):hover span:nth-child(4) {
+transform: translateY(-3px);
+}
+}
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(1),
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(4) {
+top: 4px;
+}
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(2),
+.t-menuburger_fourth.t-menuburger-opened span:nth-child(3) {
+opacity: 1;
+}
+/*---menu burger animations---*/
+@keyframes t-menuburger-anim {
+0% {
+width: 80%;
+left: 20%;
+right: 0;
+}
+50% {
+width: 100%;
+left: 0;
+right: 0;
+}
+100% {
+width: 80%;
+left: 0;
+right: 20%;
+}
+}
+@keyframes t-menuburger-anim2 {
+0% {
+width: 80%;
+left: 0;
+}
+50% {
+width: 100%;
+right: 0;
+left: 0;
+}
+100% {
+width: 80%;
+left: 20%;
+right: 0;
+}
+}</style></div></div><style>.tmenu-mobile {
+background-color: #111;
+display: none;
+width: 100%;
+top: 0;
+z-index: 990;
+}
+.tmenu-mobile_positionfixed {
+position: fixed;
+}
+.tmenu-mobile__text {
+color: #fff;
+}
+.tmenu-mobile__container {
+min-height: 64px;
+padding: 20px;
+position: relative;
+box-sizing: border-box;
+display: -webkit-flex;
+display: -ms-flexbox;
+display: flex;
+-webkit-align-items: center;
+-ms-flex-align: center;
+align-items: center;
+-webkit-justify-content: space-between;
+-ms-flex-pack: justify;
+justify-content: space-between;
+}
+.tmenu-mobile__list {
+display: block;
+}
+.tmenu-mobile__burgerlogo {
+display: inline-block;
+font-size: 24px;
+font-weight: 400;
+white-space: nowrap;
+vertical-align: middle;
+}
+.tmenu-mobile__imglogo {
+height: auto;
+display: block;
+max-width: 300px!important;
+box-sizing: border-box;
+padding: 0;
+margin: 0 auto;
+}
+@media screen and (max-width: 980px) {
+.tmenu-mobile__menucontent_hidden {
+display: none;
+height: 100%;
+}
+.tmenu-mobile {
+display: block;
+}
+}
+@media screen and (max-width: 980px) {
+#rec522662904 .t-menuburger {
+-webkit-order: 1;
+-ms-flex-order: 1;
+order: 1;
+}
+}</style><div id="nav522662904" class="t456 t456__positionfixed tmenu-mobile__menucontent_hidden" style="background-color: rgba(0,0,0,0.0); height:100px; " data-bgcolor-hex="#000000" data-bgcolor-rgba="rgba(0,0,0,0.0)" data-navmarker="nav522662904marker" data-appearoffset="" data-bgopacity-two="60" data-menushadow="" data-bgopacity="0.0" data-bgcolor-rgba-afterscroll="rgba(0,0,0,0.60)" data-menu-items-align="right" data-menu="yes"><div class="t456__maincontainer " style="height:100px;"><div class="t456__leftwrapper" style="min-width:80px;width:80px;"><div class="t456__logowrapper" style="display: block;"><a href="/" style="color:#ffffff;"><img class="t456__imglogo t456__imglogomobile" 
+src="images/tild6563-3333-4638-b564-643262663638__noroot.png" 
+imgfield="img" 
+style="max-width: 80px; width: 80px;"
+alt="" role="presentation"></a></div></div><nav class="t456__rightwrapper t456__menualign_right" 
+aria-label="Основные разделы на странице" 
+style=""><ul class="t456__list" 
+role="menubar" aria-label="Основные разделы на странице"><li class="t456__list_item" 
+role="none" 
+style="padding:0 15px 0 0;"><a class="t-menu__link-item" 
+href=""
+role="menuitem" tabindex="0" data-menu-submenu-hook="" data-menu-item-number="1" 
+style="color:#ffffff;font-size:18px;font-weight:600;">Мой кабинет</a></li><li class="t456__list_item" 
+role="none" 
+style="padding:0 15px;"><a class="t-menu__link-item" 
+href="/page32334942.html"
+role="menuitem" tabindex="0" data-menu-submenu-hook="" data-menu-item-number="2" 
+style="color:#ffffff;font-size:18px;font-weight:600;">Как заказать</a></li><li class="t456__list_item" 
+role="none" 
+style="padding:0 0 0 15px;"><a class="t-menu__link-item" 
+href="/page32332886.html"
+role="menuitem" tabindex="0" data-menu-submenu-hook="" data-menu-item-number="3" 
+style="color:#ffffff;font-size:18px;font-weight:600;">Корзина</a></li></ul></nav></div></div><style>@media screen and (max-width: 980px) {
+#rec522662904 .t456__leftcontainer{
+padding: 20px;
+}
+}
+@media screen and (max-width: 980px) {
+#rec522662904 .t456__imglogo{
+padding: 20px 0;
+}
+}</style><script type="text/javascript">t_onReady(function() {
+t_onFuncLoad('t_menu__highlightActiveLinks', function () {
+t_menu__highlightActiveLinks('.t456__list_item a');
+});
+t_onFuncLoad('t_menu__findAnchorLinks', function () {
+t_menu__findAnchorLinks('522662904', '.t456__list_item a');
+});
+});
+window.addEventListener('resize', function () {
+t_onFuncLoad('t_menu__setBGcolor', function () {
+t_menu__setBGcolor('522662904', '.t456');
+});
+});
+t_onReady(function () {
+t_onFuncLoad('t_menu__setBGcolor', function () {
+t_menu__setBGcolor('522662904', '.t456');
+});
+});
+t_onReady(function () {
+t_onFuncLoad('t_menu__changeBgOpacity', function () {
+t_menu__changeBgOpacity('522662904', '.t456');
+window.addEventListener('scroll', t_throttle(function () {
+t_menu__changeBgOpacity('522662904', '.t456');
+}));
+});
+});</script><script type="text/javascript"> 
+t_onReady(function () {
+t_onFuncLoad('t_menu__createMobileMenu', function () {
+t_menu__createMobileMenu('522662904', '.t456');
+});
+});</script><style>#rec522662904 .t-menu__link-item{
+-webkit-transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+outline: none;
+}
+/* #rec522662904 .t-menu__link-item:not(:focus-visible){
+outline: none;
+} */
+#rec522662904 .t-menu__link-item:not(.t-active):not(.tooltipstered):hover{
+color: #c9a33c !important; }
+@supports (overflow:-webkit-marquee) and (justify-content:inherit)
+{
+#rec522662904 .t-menu__link-item,
+#rec522662904 .t-menu__link-item.t-active {
+opacity: 1 !important;
+}
+}</style><!--[if IE 8]><style>#rec522662904 .t456 {
+filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#D9000000', endColorstr='#D9000000');
+}</style><![endif]--></div><div id="rec522661184" class="r t-rec" style=" " data-animationappear="off" data-record-type="18" ><!-- cover --><div class="t-cover"
+id="recorddiv522661184"
+bgimgfield="img"
+style="height:60vh; background-image:url('images/tild6466-3565-4261-a634-383737343234__-__resize__20x__noroot.png');"
+><div class="t-cover__carrier" id="coverCarry522661184"data-content-cover-id="522661184"data-content-cover-bg="images/tild6466-3565-4261-a634-383737343234__noroot.png"data-display-changed="true"data-content-cover-height="60vh"data-content-cover-parallax=""style="height:60vh;background-attachment:scroll; "itemscope itemtype="http://schema.org/ImageObject"><meta itemprop="image" content="images/tild6466-3565-4261-a634-383737343234__noroot.png"></div><div class="t-cover__filter" style="height:60vh;background-image: -moz-linear-gradient(top, rgba(0,0,0,0.50), rgba(0,0,0,0.50));background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.50), rgba(0,0,0,0.50));background-image: -o-linear-gradient(top, rgba(0,0,0,0.50), rgba(0,0,0,0.50));background-image: -ms-linear-gradient(top, rgba(0,0,0,0.50), rgba(0,0,0,0.50));background-image: linear-gradient(top, rgba(0,0,0,0.50), rgba(0,0,0,0.50));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#7f000000', endColorstr='#7f000000');"></div> <div class="t-container"> <div class="t-col t-col_12 "> <div class="t-cover__wrapper t-valign_middle" style="height:60vh;"> <div class="t001 t-align_center"> <div class="t001__wrapper" data-hook-content="covercontent"> 
+<div class="t001__title t-title t-title_xl" style="" field="title">КАК ЗАКАЗАТЬ</div> 
+<span class="space"></span> </div> </div> </div> </div> </div></div> </div><div id="rec522661186" class="r t-rec t-rec_pt_30 t-rec_pb_45" style="padding-top:30px;padding-bottom:45px; " data-record-type="218" ><!-- T005 --><div class="t005"><div class="t-container"><div class="t-row"><div class="t-col t-col_4 t-prefix_2"><div class="t005__text t-text t-text_md" style="" field="text"><strong>ОПЛАТА</strong><br />Оплата покупок происходит при оформлении заказа через наш сайт с помощью системы электронных платежей Яндекс.Касса.<br />Вы можете оплатить: Visa, MasterCard, Сбербанк Онлайн, WebMoney, Яндекс Деньги, QIWI, другими банковскими картами.<br /><br /></div></div><div class="t-col t-col_4 "><div class="t005__text t-text t-text_md" style="" field="text2"><strong>ДОСТАВКА</strong><br /><strong>Все заказы мы отправляем Почтой России.</strong><br />Отправка осуществляется каждый(ую): понедельник, вторник и пятницу. Ваш заказ будет отправлен только после 100% оплаты.<br />Стоимость доставки рассчитывается по тарифам Почты России.<br /><br />На данный момент стоимость средней пересылки составляет в пределах 200-350 руб.<br /><br />Срок доставки зависит от удаленности пункта получения, а также от работы службы доставки Почты РФ, по нашему опыту, это не более 9 дней.<br /><br />Адрес доставки указывается при оформлении заказа.<br /><strong>*При покупке товаров на сумму свыше 6000 рублей действует бесплатная доставка по России и СНГ!</strong></div></div></div></div></div></div><div id="rec522661187" class="r t-rec t-rec_pt_60 t-rec_pb_60" style="padding-top:60px;padding-bottom:60px; " data-record-type="181" ><!-- T166 --><div class="t166"><div class="t-container"> <div class="t-col t-col_8 t-prefix_2"><div class="t166__text t-text t-text_md" style="" field="text"><strong>ВОЗВРАТ</strong><br /><strong>Вы можете вернуть свою покупку в течение 14 дней с момента получения заказа.</strong><br />К возврату принимаются только те вещи, которые вы приобрели за полную стоимость. Товар, проданный на распродаже, к возврату не принимается. Вещи прошедшие стирку или бывшие в носке к возврату не принимаются. <br /><br /></div> </div><div class="t-col t-col_2 "><div class="t166__textsmall t-text t-text_xs" style="" field="title">Мы не несем ответственности за все повреждения и потери, которые могут произойти с посылкой во время доставки.</div></div> 
+</div></div></div><div id="rec526965966" class="r t-rec uc-down" style=" " data-animationappear="off" data-record-type="217" ><div class="t190" style="position:fixed; z-index:100000; bottom:30px; right:20px; min-height:30px"> <a href="javascript:t190_scrollToTop()"> <svg role="presentation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+width="50px" height="50px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve"> <path style="fill:#000000;" d="M47.875,24c0,13.186-10.689,23.875-23.875,23.875S0.125,37.186,0.125,24S10.814,0.125,24,0.125
+S47.875,10.814,47.875,24z M25.503,16.881l6.994,7.049c0.583,0.588,1.532,0.592,2.121,0.008c0.588-0.583,0.592-1.533,0.008-2.122
+l-9.562-9.637c-0.281-0.283-0.664-0.443-1.063-0.443c0,0,0,0-0.001,0c-0.399,0-0.782,0.159-1.063,0.442l-9.591,9.637
+c-0.584,0.587-0.583,1.537,0.005,2.121c0.292,0.292,0.675,0.437,1.058,0.437c0.385,0,0.77-0.147,1.063-0.442L22.5,16.87v19.163
+c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5L25.503,16.881z"/> </svg> 
+</a></div><script>t_onReady(function(){
+var rec = document.querySelector('#rec526965966');
+if(!rec) return;
+var wrapperBlock = rec.querySelector('.t190');
+if(!wrapperBlock) return;
+wrapperBlock.style.display = 'none';
+window.addEventListener('scroll', t_throttle(function(){
+if (window.pageYOffset > window.innerHeight) {
+if(wrapperBlock.style.display === 'none') wrapperBlock.style.display = 'block';
+}else{
+if(wrapperBlock.style.display === 'block') wrapperBlock.style.display = 'none'; 
+};
+})); 
+}); </script></div><div id="rec522662740" class="r t-rec t-rec_pt_30 t-rec_pb_75" style="padding-top:30px;padding-bottom:75px;background-color:#1c1c1c; " data-record-type="573" data-bg-color="#1c1c1c"><!-- t573--><div class="t573"> <div class="t-container"> <div class="t-col t-col_6 t-prefix_3 t-align_center"> 
+<div class="t573__contacts t-title t-title_sm" style="color:#ffffff;" field="text"><br />iasautkin@gmail.com</div> <div class="t573__address t-text t-text_sm" style="color:#ffffff;" field="text2">Красноярск, ​<a href="https://2gis.ru/krasnoyarsk/geo/985798073657220">Академика Киренского, 26 к1</a></div> 
+<div class="t-sociallinks"> <div class="t-sociallinks__wrapper"> <!-- new soclinks --> <div class="t-sociallinks__item t-sociallinks__item_vk" title="vk.com"><a href="newstkn" target="_blank" rel="nofollow" style="width: 48px; height: 48px;"><svg class="t-sociallinks__svg" width=48px height=48px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50ZM25 34c.406 19.488 10.15 31.2 27.233 31.2h.968V54.05c6.278.625 11.024 5.216 12.93 11.15H75c-2.436-8.87-8.838-13.773-12.836-15.647C66.162 47.242 71.783 41.62 73.126 34h-8.058c-1.749 6.184-6.932 11.805-11.867 12.336V34h-8.057v21.611C40.147 54.362 33.838 48.304 33.556 34H25Z" fill="#0f61bf"/></svg></a></div> <div class="t-sociallinks__item t-sociallinks__item_vk" title="vk.com"><a href="delamorte" target="_blank" rel="nofollow" style="width: 48px; height: 48px;"><svg class="t-sociallinks__svg" width=48px height=48px viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"> <path fill-rule="evenodd" clip-rule="evenodd" d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50ZM25 34c.406 19.488 10.15 31.2 27.233 31.2h.968V54.05c6.278.625 11.024 5.216 12.93 11.15H75c-2.436-8.87-8.838-13.773-12.836-15.647C66.162 47.242 71.783 41.62 73.126 34h-8.058c-1.749 6.184-6.932 11.805-11.867 12.336V34h-8.057v21.611C40.147 54.362 33.838 48.304 33.556 34H25Z" fill="#0f61bf"/></svg></a></div> <!-- /new soclinks --> <script> 
+t_onReady(function () {
+var rec = document.getElementById('rec522662740');
+if (!rec) return;
+var customImageList = rec.querySelectorAll('img.t-sociallinks__customimg');
+Array.prototype.forEach.call(customImageList, function(img) {
+var imgURL = img.getAttribute('src');
+if (imgURL.indexOf('/lib__tildaicon__') !== -1 || imgURL.indexOf('/lib/tildaicon/') !== -1) {
+var xhr = new XMLHttpRequest();
+xhr.open('GET', imgURL);
+xhr.responseType = 'document';
+xhr.onload = function() {
+if (xhr.status >= 200 && xhr.status < 400) {
+var response = xhr.response;
+var svg = response.querySelector('svg');
+svg.style.width = '48px';
+svg.style.height = '48px';
+var figureList = svg.querySelectorAll('*:not(g):not(title):not(desc)');
+for(var j = 0; j < figureList.length; j++) {
+figureList[j].style.fill = '#0f61bf';
+}
+img.parentNode.append(svg);
+img.remove();
+} else {
+img.style.visibility = 'visible';
+}
+}
+xhr.onerror = function(error) {
+img.style.visibility = 'visible';
+}
+xhr.send();
+}
+});
+});
+</script> </div></div> </div> </div></div></div></div><!--/allrecords-->
